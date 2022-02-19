@@ -19,6 +19,7 @@ export default function Contact() {
       method: "POST",
       body: JSON.stringify(formData),
     });
+    console.log(response);
     if (response.status === 200) {
       setComplete(true);
     }
