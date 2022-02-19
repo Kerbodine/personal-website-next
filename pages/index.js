@@ -4,6 +4,7 @@ import { FiMail } from "react-icons/fi";
 import LinkTag from "../components/LinkTag";
 import Project from "../components/Project";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Home() {
   const contacts = [
@@ -38,7 +39,7 @@ export default function Home() {
       icon: "🎥",
       color: "bg-red-100",
       description: "Official TEDx event website for VSA",
-      link: "https://www.tedxvictoriashanghaiacademy.com//",
+      link: "https://www.tedxvictoriashanghaiacademy.com",
     },
     {
       title: "Half-life Calculator",

@@ -4,11 +4,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 
-html {
-  font-family: "Open Sans", sans-serif;
-}
-
 @layer base {
+  body {
+    font-family: "Open Sans", sans-serif !important;
+  }
   .link-tag {
     @apply px-2 py-1 border-2 border-gray-300 hover:border-transparent bg-gray-100 text-gray-500 font-bold tracking-wide rounded-xl cursor-pointer flex items-center gap-1 hover:bg-gray-600 hover:text-white;
   }
