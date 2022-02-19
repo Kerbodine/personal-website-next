@@ -1,82 +1,105 @@
-import { SiDribbble, SiGithub } from "react-icons/si";
+import { SiBehance, SiDribbble, SiGithub, SiLinkedin } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
 
 import LinkTag from "../components/LinkTag";
 import Project from "../components/Project";
+import Link from "next/link";
 
 export default function Home() {
+  const contacts = [
+    {
+      icon: <SiGithub />,
+      link: "https://github.com/Kerbodine",
+    },
+    {
+      icon: <SiDribbble />,
+      link: "https://dribbble.com/Kerbodine",
+    },
+    {
+      icon: <SiBehance />,
+      link: "https://www.behance.net/kerbodine",
+    },
+    {
+      icon: <SiLinkedin />,
+      link: "https://www.linkedin.com/in/michaelytong/",
+    },
+  ];
+
+  const projects = [
+    {
+      title: "FocalTimer",
+      icon: "📝",
+      color: "bg-sky-100",
+      description: "To-do list and notes app for students",
+      link: "https://focaltimer.netlify.app/reminders",
+    },
+    {
+      title: "TEDxVSA Website",
+      icon: "🎥",
+      color: "bg-red-100",
+      description: "Official TEDx event website for VSA",
+      link: "https://www.tedxvictoriashanghaiacademy.com//",
+    },
+    {
+      title: "Half-life Calculator",
+      icon: "🔮",
+      color: "bg-fuchsia-100",
+      description: "Calculator for solving nuclear decay questions",
+      link: "https://decay-calc.netlify.app/",
+    },
+    {
+      title: "Bauhaus Pattern Generator",
+      icon: "🎨",
+      color: "bg-amber-100",
+      description: "Bauhaus style SVG generator in the browser",
+      link: "https://bauhaus-pattern.netlify.app/",
+    },
+    {
+      title: "Worldle Clone",
+      icon: "🧩",
+      color: "bg-green-100",
+      description: "Worldle remade with React and Tailwind",
+      link: "https://react-wordle.netlify.app/",
+    },
+    {
+      title: "Apogee Academy",
+      icon: "🚀",
+      color: "bg-indigo-100",
+      description: "Coming soon...",
+      link: "",
+    },
+  ];
+
   return (
     <>
-      <h1 className="text-3xl md:text-4xl text-gray-800 font-semibold">
-        Hi 👋! I&apos;m Michael Tong,
-        <br />
+      <header className="text-3xl md:text-4xl text-gray-800 font-semibold">
+        <h1 className="tracking-tight	leading-8 mb-2">
+          Hi 👋! I&apos;m Michael Tong,
+        </h1>
         <div className="text-xl md:text-2xl leading-6 text-gray-500 font-normal">
           a full stack developer and designer from Hong Kong 🌆.
         </div>
-      </h1>
-      <div className="flex gap-2 mt-8 flex-wrap">
-        <LinkTag
-          icon={<SiGithub />}
-          title="Github"
-          link="https://github.com/Kerbodine"
-        />
-        <LinkTag
-          icon={<SiDribbble />}
-          title="Dribbble"
-          link="https://dribbble.com/Kerbodine"
-        />
-        <LinkTag
-          icon={<FiMail />}
-          title="Email"
-          link="mailto:contact.michaeltong@gmail.com"
-        />
+      </header>
+      <div className="flex gap-2 mt-4 flex-wrap">
+        <Link href="/contact" passHref>
+          <div className="link-tag bg-gray-600 hover:bg-gray-700 border-transparent text-white">
+            <FiMail />
+            <p className="text-sm">Contact</p>
+          </div>
+        </Link>
+        {contacts.map((contact, index) => (
+          <LinkTag key={index} {...contact} />
+        ))}
       </div>
-      <hr className="border-none w-full h-0.5 bg-gray-200 my-8" />
+      <hr className="border-none w-full h-0.5 bg-gray-200 my-4" />
       <div>
-        <h2 className="text-xl font-semibold text-gray-800 mb-2">Projects:</h2>
-        <div className="grid gap-2 md:gap-8 grid-cols-1 md:grid-cols-2 -mx-4">
-          <Project
-            title="FocalTimer"
-            icon="📝"
-            color="bg-red-100"
-            description="To-do list and notes app for students"
-            link="/projects/focaltimer"
-          />
-          <Project
-            title="Bauhaus Pattern Generator"
-            icon="🖼️"
-            color="bg-green-100"
-            description="Bauhaus style svg patterns generated with Turtle"
-            link="/projects/bauhaus-pattern-generator"
-          />
-          <Project
-            title="Docs to Markdown"
-            icon="📋"
-            color="bg-indigo-100"
-            description="Simple API to convert google docs into markdown"
-            link="#"
-          />
-          <Project
-            title="Python Blooket Cafe"
-            icon="☕"
-            color="bg-yellow-100"
-            description="Blooket Cafe clone built with Pygame"
-            link="https://github.com/Kerbodine/Blooket-Cafe-Clone"
-          />
-          <Project
-            title="Project 5"
-            icon="🎆"
-            color="bg-purple-100"
-            description="Coming soon..."
-            link="#"
-          />
-          <Project
-            title="Project 6"
-            icon="📘"
-            color="bg-blue-100"
-            description="Coming soon..."
-            link="#"
-          />
+        <h2 className="text-lg md:text-xl font-semibold text-gray-500 mt-6 mb-2">
+          Projects:
+        </h2>
+        <div className="grid gap-2 grid-cols-1 md:grid-cols-2 -mx-4">
+          {projects.map((project, index) => (
+            <Project key={index} {...project} />
+          ))}
         </div>
       </div>
     </>
