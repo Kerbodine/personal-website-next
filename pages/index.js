@@ -30,9 +30,24 @@ export default function Home() {
     {
       title: "FocalTimer",
       icon: "📝",
-      color: "bg-sky-100",
+      color: "bg-orange-100",
       description: "To-do list and notes app for students",
       link: "https://focaltimer.netlify.app/reminders",
+    },
+    {
+      title: "QBE CubeSat Dashboard",
+      icon: "🛰️",
+      color: "bg-blue-100",
+      description:
+        "HKU Business Engineering Science & Technology CubeSat project",
+      link: "https://apogee-academy.vercel.app/",
+    },
+    {
+      title: "Apogee Academy",
+      icon: "🚀",
+      color: "bg-indigo-100",
+      description: "Youth run online learning community for SDG education",
+      link: "https://apogee-academy.vercel.app/",
     },
     {
       title: "TEDxVSA Website",
@@ -40,13 +55,6 @@ export default function Home() {
       color: "bg-red-100",
       description: "Official TEDx event website for VSA",
       link: "https://www.tedxvictoriashanghaiacademy.com",
-    },
-    {
-      title: "Half-life Calculator",
-      icon: "🔮",
-      color: "bg-fuchsia-100",
-      description: "Calculator for solving nuclear decay questions",
-      link: "https://decay-calc.netlify.app/",
     },
     {
       title: "Bauhaus Pattern Generator",
@@ -63,11 +71,11 @@ export default function Home() {
       link: "https://react-wordle.netlify.app/",
     },
     {
-      title: "Apogee Academy",
-      icon: "🚀",
-      color: "bg-indigo-100",
-      description: "Coming soon...",
-      link: "",
+      title: "Half-life Calculator",
+      icon: "🔮",
+      color: "bg-fuchsia-100",
+      description: "Calculator for solving nuclear decay questions",
+      link: "https://decay-calc.netlify.app/",
     },
   ];
 
