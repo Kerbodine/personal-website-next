@@ -40,7 +40,7 @@ export default function Home() {
       color: "bg-blue-100",
       description:
         "HKU Business Engineering Science & Technology CubeSat project",
-      link: "https://apogee-academy.vercel.app/",
+      link: "https://qbe-cubesat.netlify.app/",
     },
     {
       title: "Apogee Academy",
@@ -57,25 +57,18 @@ export default function Home() {
       link: "https://www.tedxvictoriashanghaiacademy.com",
     },
     {
+      title: "FocalTasks",
+      icon: "✅",
+      color: "bg-green-100",
+      description: "Dead simple new tab todo-list for Chrome.",
+      link: "https://chrome.google.com/webstore/detail/focaltasks/iplpkldbkjpngjdepcddfpibdajnohmp",
+    },
+    {
       title: "Bauhaus Pattern Generator",
       icon: "🎨",
       color: "bg-amber-100",
       description: "Bauhaus style SVG generator in the browser",
       link: "https://bauhaus-pattern.netlify.app/",
-    },
-    {
-      title: "Worldle Clone",
-      icon: "🧩",
-      color: "bg-green-100",
-      description: "Worldle remade with React and Tailwind",
-      link: "https://react-wordle.netlify.app/",
-    },
-    {
-      title: "Half-life Calculator",
-      icon: "🔮",
-      color: "bg-fuchsia-100",
-      description: "Calculator for solving nuclear decay questions",
-      link: "https://decay-calc.netlify.app/",
     },
   ];
 

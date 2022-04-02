@@ -2,8 +2,12 @@ import Link from "next/link";
 
 export default function Project({ icon, color, title, description, link }) {
   return (
-    <Link href={link} passHref target="_blank">
-      <div className="w-full rounded-md flex h-24 p-4 hover:bg-gray-50 group cursor-pointer">
+    <Link href={link} passHref>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        className="w-full rounded-md flex h-24 p-4 hover:bg-gray-50 group cursor-pointer"
+      >
         <div
           className={`w-16 h-16 rounded-md ${color} flex-none text-4xl flex items-center justify-center`}
         >
@@ -19,7 +23,7 @@ export default function Project({ icon, color, title, description, link }) {
             {description}
           </p>
         </div>
-      </div>
+      </a>
     </Link>
   );
 }
