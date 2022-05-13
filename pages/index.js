@@ -70,6 +70,13 @@ export default function Home() {
       description: "Bauhaus style SVG generator in the browser",
       link: "https://bauhaus-pattern.netlify.app/",
     },
+    {
+      title: "Voice Teleprompter",
+      icon: "🎙️",
+      color: "bg-gray-100",
+      description: "Teleprompter powered by speech to text API",
+      link: "https://teleprompter-beta.netlify.app/",
+    },
   ];
 
   return (
