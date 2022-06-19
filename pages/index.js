@@ -4,7 +4,7 @@ import { FiMail } from "react-icons/fi";
 import LinkTag from "../components/LinkTag";
 import Project from "../components/Project";
 import Link from "next/link";
-import Head from "next/head";
+import Image from "next/image";
 
 export default function Home() {
   const contacts = [
@@ -100,9 +100,48 @@ export default function Home() {
           <LinkTag key={index} {...contact} />
         ))}
       </div>
-      <hr className="border-none w-full h-0.5 bg-gray-200 my-4" />
+      {/* <hr className="border-none w-full h-0.5 bg-gray-200 my-4" /> */}
+      <div className="mt-6 relative w-full hover:-translate-y-0.5 transition-transform hidden sm:block">
+        <Image
+          src="/focaltimer.svg"
+          alt="focaltimer"
+          width="928"
+          height="256"
+        />
+        <div className="absolute sm:top-5 sm:left-6 md:top-8 md:left-9 lg:top-10 lg:left-12">
+          <h2 className="text-xl md:text-2xl font-bold tracking-tight text-gray-600">
+            Introducing <span className="text-[#4483FD]">FocalTimer</span>
+          </h2>
+          <p className="text-gray-500 font-semibold tracking-tight">
+            Your all in one productivity suite
+          </p>
+        </div>
+        <button className="text-sm md:text-base absolute sm:left-6 sm:bottom-6 md:left-9 md:bottom-9 lg:bottom-12 lg:left-12 px-4 py-1.5 bg-[#4483FD] text-white font-semibold rounded-full">
+          Learn More →
+        </button>
+      </div>
+      <div className="block sm:hidden mt-6 relative w-full">
+        <Image
+          src="/focaltimer-sm.svg"
+          alt="focaltimer"
+          width="480px"
+          height="400px"
+        />
+        <div className="absolute top-5 left-6 xs:left-8 xs:top-7">
+          <h2 className="text-xl font-bold tracking-tight text-gray-600">
+            Introducing <span className="text-[#4483FD]">FocalTimer</span>
+          </h2>
+          <p className="text-gray-500 font-semibold tracking-tight">
+            Your all in one productivity suite
+          </p>
+        </div>
+        <button className="text-sm absolute left-6 bottom-7 xs:left-8 xs:bottom-9 px-4 py-1.5 bg-[#4483FD] text-white font-semibold rounded-full">
+          Learn More →
+        </button>
+      </div>
+      {/* <hr className="border-none w-full h-0.5 bg-gray-200 my-4" /> */}
       <div>
-        <h2 className="text-lg md:text-xl font-semibold text-gray-500 mt-6 mb-2">
+        <h2 className="text-lg md:text-xl font-semibold text-gray-500 mt-4 mb-2">
           Projects:
         </h2>
         <div className="grid gap-2 grid-cols-1 md:grid-cols-2 -mx-4">
