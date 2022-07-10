@@ -5,6 +5,7 @@ import LinkTag from "../components/LinkTag";
 import Project from "../components/Project";
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 
 export default function Home() {
   const contacts = [
@@ -81,6 +82,7 @@ export default function Home() {
 
   return (
     <>
+      <Script async src="https://cdn.splitbee.io/sb.js" />
       <header className="text-3xl md:text-4xl text-gray-800 font-semibold">
         <h1 className="tracking-tight	leading-8 mb-2">
           Hi 👋! I&apos;m Michael Tong,
