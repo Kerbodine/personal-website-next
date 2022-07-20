@@ -7,6 +7,8 @@ export default function Project({ icon, color, title, description, link }) {
         target="_blank"
         rel="noreferrer"
         className="w-full rounded-md flex h-24 p-4 hover:bg-gray-50 group cursor-pointer"
+        data-splitbee-event="Project"
+        data-splitbee-event-destination={`${title}`}
       >
         <div
           className={`w-16 h-16 rounded-md ${color} flex-none text-4xl flex items-center justify-center`}

@@ -12,18 +12,17 @@ export default function Home() {
     {
       icon: <SiGithub />,
       link: "https://github.com/Kerbodine",
+      title: "Github",
     },
     {
       icon: <SiDribbble />,
       link: "https://dribbble.com/Kerbodine",
-    },
-    {
-      icon: <SiBehance />,
-      link: "https://www.behance.net/kerbodine",
+      title: "Dribbble",
     },
     {
       icon: <SiLinkedin />,
       link: "https://www.linkedin.com/in/michaelytong/",
+      title: "LinkedIn",
     },
   ];
 
@@ -33,7 +32,7 @@ export default function Home() {
       icon: "📝",
       color: "bg-orange-100",
       description: "To-do list and notes app for students",
-      link: "https://focaltimer.netlify.app/reminders",
+      link: "https://app.focaltimer.com/",
     },
     {
       title: "QBE CubeSat Dashboard",
@@ -41,7 +40,7 @@ export default function Home() {
       color: "bg-blue-100",
       description:
         "HKU Business Engineering Science & Technology CubeSat project",
-      link: "https://qbe-cubesat.netlify.app/",
+      link: "https://qbe-cubesat.netlify.app/login",
     },
     {
       title: "Apogee Academy",
@@ -102,8 +101,8 @@ export default function Home() {
           <LinkTag key={index} {...contact} />
         ))}
       </div>
-      {/* <hr className="border-none w-full h-0.5 bg-gray-200 my-4" /> */}
-      <div className="mt-6 relative w-full hover:-translate-y-0.5 transition-transform hidden sm:block">
+      <hr className="border-none w-full h-0.5 bg-gray-200 my-4" />
+      {/* <div className="mt-6 relative w-full hover:-translate-y-0.5 transition-transform hidden sm:block">
         <Image
           src="/focaltimer.svg"
           alt="focaltimer"
@@ -121,8 +120,8 @@ export default function Home() {
         <button className="text-sm md:text-base absolute sm:left-6 sm:bottom-6 md:left-9 md:bottom-9 lg:bottom-12 lg:left-12 px-4 py-1.5 bg-[#4483FD] text-white font-semibold rounded-full">
           Learn More →
         </button>
-      </div>
-      <div className="block sm:hidden mt-6 relative w-full">
+      </div> */}
+      {/* <div className="block sm:hidden mt-6 relative w-full">
         <Image
           src="/focaltimer-sm.svg"
           alt="focaltimer"
@@ -140,7 +139,7 @@ export default function Home() {
         <button className="text-sm absolute left-6 bottom-7 xs:left-8 xs:bottom-9 px-4 py-1.5 bg-[#4483FD] text-white font-semibold rounded-full">
           Learn More →
         </button>
-      </div>
+      </div> */}
       {/* <hr className="border-none w-full h-0.5 bg-gray-200 my-4" /> */}
       <div>
         <h2 className="text-lg md:text-xl font-semibold text-gray-500 mt-4 mb-2">
