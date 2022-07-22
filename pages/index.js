@@ -1,11 +1,11 @@
 import { SiBehance, SiDribbble, SiGithub, SiLinkedin } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
-
 import LinkTag from "../components/LinkTag";
 import Project from "../components/Project";
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
+import splitbee from "@splitbee/web";
 
 export default function Home() {
   const contacts = [
@@ -28,26 +28,23 @@ export default function Home() {
 
   const projects = [
     {
-      title: "FocalTimer",
-      icon: "📝",
-      color: "bg-orange-100",
-      description: "To-do list and notes app for students",
-      link: "https://app.focaltimer.com/",
-    },
-    {
-      title: "QBE CubeSat Dashboard",
-      icon: "🛰️",
-      color: "bg-blue-100",
-      description:
-        "HKU Business Engineering Science & Technology CubeSat project",
-      link: "https://qbe-cubesat.netlify.app/login",
+      title: "FocalTasks",
+      image: "/projects/focaltimer-logo.png",
+      description: "Collaborative todo-list workspace app",
+      link: "http://focaltasks.com/",
     },
     {
       title: "Apogee Academy",
-      icon: "🚀",
-      color: "bg-indigo-100",
+      image: "/projects/apogee-logo.png",
       description: "Youth run online learning community for SDG education",
       link: "https://apogee-academy.vercel.app/",
+    },
+    {
+      title: "QBE CubeSat Dashboard",
+      image: "/projects/cubesat-logo.png",
+      description:
+        "HKU Business Engineering Science & Technology CubeSat project",
+      link: "https://qbe-cubesat.netlify.app/login",
     },
     {
       title: "TEDxVSA Website",
@@ -57,7 +54,14 @@ export default function Home() {
       link: "https://www.tedxvictoriashanghaiacademy.com",
     },
     {
-      title: "FocalTasks",
+      title: "FocalTimer (Legacy)",
+      icon: "📝",
+      color: "bg-blue-100",
+      description: "To-do list and notes app for students",
+      link: "https://focaltimer.netlify.app/",
+    },
+    {
+      title: "FocalTab Extension",
       icon: "✅",
       color: "bg-green-100",
       description: "Dead simple new tab todo-list for Chrome.",
@@ -78,6 +82,11 @@ export default function Home() {
       link: "https://teleprompter-beta.netlify.app/",
     },
   ];
+
+  splitbee.init();
+
+  splitbee.track("Profile");
+  splitbee.track("Project");
 
   return (
     <>
@@ -102,7 +111,7 @@ export default function Home() {
         ))}
       </div>
       <hr className="border-none w-full h-0.5 bg-gray-200 my-4" />
-      {/* <div className="mt-6 relative w-full hover:-translate-y-0.5 transition-transform hidden sm:block">
+      <div className="mt-6 relative w-full hidden sm:block">
         <Image
           src="/focaltimer.svg"
           alt="focaltimer"
@@ -111,17 +120,19 @@ export default function Home() {
         />
         <div className="absolute sm:top-5 sm:left-6 md:top-8 md:left-9 lg:top-10 lg:left-12">
           <h2 className="text-xl md:text-2xl font-bold tracking-tight text-gray-600">
-            Introducing <span className="text-[#4483FD]">FocalTimer</span>
+            Introducing <span className="text-[#007AFF]">FocalTasks</span>
           </h2>
           <p className="text-gray-500 font-semibold tracking-tight">
             Your all in one productivity suite
           </p>
         </div>
-        <button className="text-sm md:text-base absolute sm:left-6 sm:bottom-6 md:left-9 md:bottom-9 lg:bottom-12 lg:left-12 px-4 py-1.5 bg-[#4483FD] text-white font-semibold rounded-full">
-          Learn More →
-        </button>
-      </div> */}
-      {/* <div className="block sm:hidden mt-6 relative w-full">
+        <a target="_blank" rel="noreferrer" href="https://www.focaltasks.com/">
+          <button className="text-sm md:text-base absolute sm:left-6 sm:bottom-6 md:left-9 md:bottom-9 hover:opacity-80 transition-opacity lg:bottom-12 lg:left-12 px-4 py-1.5 bg-[#007AFF] text-white font-semibold rounded-full">
+            Learn More →
+          </button>
+        </a>
+      </div>
+      <div className="block sm:hidden mt-6 relative w-full">
         <Image
           src="/focaltimer-sm.svg"
           alt="focaltimer"
@@ -130,17 +141,19 @@ export default function Home() {
         />
         <div className="absolute top-5 left-6 xs:left-8 xs:top-7">
           <h2 className="text-xl font-bold tracking-tight text-gray-600">
-            Introducing <span className="text-[#4483FD]">FocalTimer</span>
+            Introducing <span className="text-[#007AFF]">FocalTasks</span>
           </h2>
           <p className="text-gray-500 font-semibold tracking-tight">
             Your all in one productivity suite
           </p>
         </div>
-        <button className="text-sm absolute left-6 bottom-7 xs:left-8 xs:bottom-9 px-4 py-1.5 bg-[#4483FD] text-white font-semibold rounded-full">
-          Learn More →
-        </button>
-      </div> */}
-      {/* <hr className="border-none w-full h-0.5 bg-gray-200 my-4" /> */}
+        <a target="_blank" rel="noreferrer" href="https://www.focaltasks.com/">
+          <button className="text-sm absolute left-6 bottom-7 xs:left-8 xs:bottom-9 px-4 py-1.5 bg-[#007AFF] transition-opacity hover:opacity-80 text-white font-semibold rounded-full">
+            Learn More →
+          </button>
+        </a>
+      </div>
+      <hr className="border-none w-full h-0.5 bg-gray-200 my-4" />
       <div>
         <h2 className="text-lg md:text-xl font-semibold text-gray-500 mt-4 mb-2">
           Projects:

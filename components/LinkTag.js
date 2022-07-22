@@ -8,7 +8,7 @@ export default function LinkTag({ icon, title, link }) {
         href={link}
         rel="noreferrer"
         target="_blank"
-        data-splitbee-event="External Link"
+        data-splitbee-event="Profile"
         data-splitbee-event-destination={`${title}`}
       >
         {icon}
